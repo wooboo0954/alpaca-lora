@@ -115,6 +115,7 @@ def train(
         torch_dtype=torch.float16,
         device_map=device_map,
     )
+    
 
     tokenizer = LlamaTokenizer.from_pretrained(base_model)
 
@@ -280,4 +281,5 @@ def train(
 
 
 if __name__ == "__main__":
-    fire.Fire(train)
+    with torch.autocast("cuda"):
+        fire.Fire(train)
