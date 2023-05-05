@@ -191,7 +191,7 @@ def main(
             )
         ],
         title="MyAlpaca🦙",
-        description="MyAlpaca基于Alpaca 7B扩展了中文Token并补充了中国平安保险相关语料进行微调。",  # noqa: E501
+        description="MyAlpaca基于Alpaca 7B扩展了中文Token和wedata产品相关极小语料集。",  # noqa: E501
     ).queue().launch(server_name="0.0.0.0", share=share_gradio)
     # Old testing code follows.
 
